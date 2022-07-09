@@ -19,9 +19,9 @@
     },
     "article": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::article.article",
-      "mappedBy": "type_article"
+      "inversedBy": "type_articles"
     }
   }
 }
