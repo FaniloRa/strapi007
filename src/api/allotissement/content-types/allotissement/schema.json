@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "allotissements",
+  "info": {
+    "singularName": "allotissement",
+    "pluralName": "allotissements",
+    "displayName": "allotissement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "libelle": {
+      "type": "string"
+    },
+    "fournisseur": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::fournisseur.fournisseur",
+      "mappedBy": "allotissement"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article",
+      "mappedBy": "allotissement"
+    }
+  }
+}

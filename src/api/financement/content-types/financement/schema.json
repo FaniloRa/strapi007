@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "financements",
+  "info": {
+    "singularName": "financement",
+    "pluralName": "financements",
+    "displayName": "financement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "libelle": {
+      "type": "string"
+    },
+    "projet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::projet.projet",
+      "inversedBy": "financements"
+    }
+  }
+}

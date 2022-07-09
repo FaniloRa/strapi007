@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "type_articles",
+  "info": {
+    "singularName": "type-article",
+    "pluralName": "type-articles",
+    "displayName": "type_article"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "libelle": {
+      "type": "string"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article",
+      "mappedBy": "type_article"
+    }
+  }
+}

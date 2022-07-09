@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "libelle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "spec_tech_min_req": {
+      "type": "richtext"
+    },
+    "spec_tech_soumiss": {
+      "type": "richtext"
+    },
+    "cout_estimatif_mga": {
+      "type": "biginteger"
+    },
+    "cout_estimatif_usd": {
+      "type": "biginteger"
+    },
+    "lieu_livraison": {
+      "type": "string"
+    },
+    "ligne_ptba": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "type_article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::type-article.type-article",
+      "inversedBy": "article"
+    },
+    "projets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::projet.projet",
+      "mappedBy": "article"
+    },
+    "allotissement": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::allotissement.allotissement",
+      "inversedBy": "article"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fournisseurs",
+  "info": {
+    "singularName": "fournisseur",
+    "pluralName": "fournisseurs",
+    "displayName": "fournisseur",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "libelle": {
+      "type": "string"
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "allotissement": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::allotissement.allotissement",
+      "inversedBy": "fournisseur"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}
