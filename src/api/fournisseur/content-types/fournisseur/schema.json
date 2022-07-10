@@ -24,14 +24,14 @@
     "phone": {
       "type": "string"
     },
-    "allotissement": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::allotissement.allotissement",
-      "inversedBy": "fournisseur"
-    },
     "email": {
       "type": "email"
+    },
+    "allotissement": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::allotissement.allotissement",
+      "inversedBy": "fournisseurs"
     }
   }
 }

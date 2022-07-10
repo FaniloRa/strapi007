@@ -4,7 +4,8 @@
   "info": {
     "singularName": "allotissement",
     "pluralName": "allotissements",
-    "displayName": "allotissement"
+    "displayName": "allotissement",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,9 +18,9 @@
     "libelle": {
       "type": "string"
     },
-    "fournisseur": {
+    "fournisseurs": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::fournisseur.fournisseur",
       "mappedBy": "allotissement"
     },

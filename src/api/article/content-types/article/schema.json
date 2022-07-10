@@ -50,11 +50,11 @@
         "audios"
       ]
     },
-    "type_articles": {
+    "type_article": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
       "target": "api::type-article.type-article",
-      "mappedBy": "article"
+      "inversedBy": "article"
     },
     "projets": {
       "type": "relation",
